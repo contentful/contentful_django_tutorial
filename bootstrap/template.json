@@ -1,0 +1,171 @@
+{
+  "version": 3,
+  "contentTypes": [
+    {
+      "id": "author",
+      "name": "Author",
+      "displayField": "name",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol"
+        },
+        {
+          "id": "role",
+          "name": "Role",
+          "type": "Symbol"
+        },
+        {
+          "id": "avatar",
+          "name": "Avatar",
+          "type": "Link",
+          "linkType": "Asset"
+        },
+        {
+          "id": "joinedAt",
+          "name": "Joined At",
+          "type": "Date"
+        }
+      ]
+    },
+    {
+      "id": "post",
+      "name": "Post",
+      "displayField": "title",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Titulo",
+          "type": "Symbol"
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitulo",
+          "type": "Symbol"
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Link",
+          "linkType": "Entry"
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Text"
+        },
+        {
+          "id": "headerImage",
+          "name": "Header Image",
+          "type": "Link",
+          "linkType": "Asset"
+        },
+        {
+          "id": "tags",
+          "name": "Tags",
+          "type": "Array",
+          "items": {
+            "type": "Symbol"
+          }
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol"
+        },
+        {
+          "id": "publicationDate",
+          "name": "Publication Date",
+          "type": "Date"
+        }
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "id": "dave",
+      "title": "dave",
+      "file": {
+        "filename": "dave",
+        "url": "https://images.contentful.com/1t8fkm227wii/dave/287adaaf1f5ca740f09801ee9078d924/dave"
+      }
+    },
+    {
+      "id": "minecraft_agiles",
+      "title": "minecraft agiles",
+      "file": {
+        "filename": "minecraft-354458_1280",
+        "url": "https://images.contentful.com/1t8fkm227wii/minecraft_agiles/a770088af4c5957f99c81584512bc3d7/minecraft-354458_1280"
+      }
+    }
+  ],
+  "entries": {
+    "post": [
+      {
+        "sys": {
+          "id": "minecraft_agile_en"
+        },
+        "fields": {
+          "title": "Teaching Agile with Minecraft",
+          "subtitle": "A short tale about my experience using Minecraft as a teaching tool for Agile",
+          "author": {
+            "linkType": "Entry",
+            "id": "dave"
+          },
+          "content": "A few years ago, I got involved for the first time in the Agile community in Argentina,\nvery rapidly, the feeling of willing to transfer this concepts to everybody\nstarted emerging in me.\n\nTwo years ago, I started being an assistant teacher at a class called\n\"Methodologies for Team Conduction\" in my university, in which my job, aside from\ngrading tests and practices, was to teach my experiences working in Systems Engineering\nand to create an Agile Methodologies assignment in which students could get a grasp on\nwhat being Agile meant for a team, and how could this impact in their day to day\nwork.\n\nThis lesson has been doing really well with how we were teaching it, until this semester,\nwhen we found that one of the two courses we teach was lacking engagement (not just for\nthe Agile class, it was like that all the time), which really got me into thinking on\nhow could we improve our way of teaching in order to make it the most engaging possible.\n\n## Enter Minecraft\n\nSince it's release, I've been an elusive player, but a faithful follower of the game and\nsome of it's most reknowned players. And for all this time, I've noticed that there is a\nlot of people using the game in so many ways other than it's original\n\"build a house, survive the night\" marketing, that it really intrigued me on how I could\nbenefit from knowing all this.\n\nI was totally blank until last week, when I saw a [documentary](https://www.youtube.com/watch?v=-aiBSNumx0A)\nabout Game Story Development, in which it's second part it talks about kids using Minecraft\nin their schools, and that as a result they were getting team-quality approaches to solving\nproblems.\n\nSo after a few days of work, I got a prototype map in which 8 teams can work on a blank slate\nof land, in which we define some goals and we have Scrum-like iterations for the students\nto make their planning, development and retrospectives.\n\nLast night, I invited the rest of the teachers to help me playtest this concept. And the\nresults were more than great! It was really, really fun to do this activity. It also helped\nme understand what to improve in order to allow for better interaction with the students,\nand also taught me that the entry barrier is near to none, as one of the teachers had never\nplayed Minecraft before, and was completely into the activity after the first 5 minutes of\nthe playtest.\n\n## Next Steps\n\nI still need to finish the map, and have it completely polished before we release it into\nthe university. But our first test was more than successful.\n\nNext we need to try it out in the University, see how the students take it.\n\nI hope this is a great success!\n\n--\n\nCheers,\n\n:wq",
+          "headerImage": {
+            "linkType": "Asset",
+            "id": "minecraft_agiles"
+          },
+          "tags": [
+            "agile",
+            "gamification",
+            "minecraft"
+          ],
+          "slug": "teaching-agile-with-minecraft",
+          "publicationDate": "2015-05-19T00:00-03:00"
+        }
+      },
+      {
+        "sys": {
+          "id": "minecraft_agile_es"
+        },
+        "fields": {
+          "title": "Enseñando Ágiles con el Minecraft",
+          "subtitle": "Una pequeña historia acerca de mi experiencia usando Minecraft para la enseñanza de Ágiles",
+          "author": {
+            "linkType": "Entry",
+            "id": "dave"
+          },
+          "content": "Unos años atrás, me involucré por primera vez en la comunidad de Ágiles de Argentina,\nmuy rapidamente, empecé a sentir la necesidad de transferir estos conceptos a\ntodo el mundo.\n\nHace dos años, comencé a ser profesor asistente en una materia llamada\n\"Metodologías para la Conducción de Equipos de Trabajo\" en mi universidad,\nen la cual mi trabajo, más allá de corregir examenes y trabajos prácticos, era\nenseñar mis experiencias trabajando en Ingeniería en Sistemas y en crear una clase\nde Metodologías Ágiles en la cual los alumnos pudieran darse una idea sobre qué\nsignifica ser Ágil para un equipo, y cómo esto puede impactar en su trabajo diario.\n\nÉsta clase venía yendo muy bien con como la estábamos enseñando, hasta éste cuatrimestre,\ncuando observamos que uno de los dos cursos en los que dictamos estaba completamente falto de\nentusiasmo (no sólo para la clase de Ágiles, sino en general), lo cual me puso a pensar en\ncómo podíamos mejorar nuestra forma de enseñanza de forma de hacerla lo mas entretenida\nposible.\n\n## Bienvenido el Minecraft\n\nDesde su lanzamiento, yo he sido un jugador bastante elusivo, pero un seguidor muy fiel\ndel juego y de algunos de sus jugadores mas conocidos. Y durante todo este tiempo, noté\nque hay mucha gente usando el juego en muchas otras formas más allá del marketing original\n\"construí una casa, sobreviví la noche\", que realmente me generaron mucha intriga sobre\ncómo podía beneficiarme de conocer todo esto.\n\nEstaba totalmente en blanco hasta la semana pasada, cuando vi un [documental (en inglés)](https://www.youtube.com/watch?v=-aiBSNumx0A)\nacerca de Desarrollo de Historias de Juego, en el cual en su segunda parte, habla acerca de\nniños usando Minecraft en sus escuelas y que como resultado estaban obteniendo acercamientos\nmuy similares a la calidad de un equipo de trabajo en su resolucion de problemas.\n\nAsí que tras algunos días de trabajo, construí un mapa prototipo en el cual 8 equipos pueden\ntrabajar en un \"lienzo en blanco\" de tierra, en el cual definimos algunos objetivos y tenemos\niteraciones similares a Scrum para que los estudiantes realicen su planeamiento, desarrollo y\nretrospectivas.\n\nAnoche, invité al resto de los docentes para ayudarme a probar este concepto. Y los resultados\nfueron más que grandiosos! Fue muy, muy divertido realizar esta actividad. También me ayudo a\ncomprender qué mejorar para permitir una mejor interacción con los alumnos y también me\nenseño que la barrera de entrada al juego es cercana a nula, ya que uno de los docentes nunca\nhabia jugado al Minecraft previamente, y estuvo completamente inmerso en la actividad tras los\nprimeros 5 minutos de la prueba.\n\n## Próximos Pasos\n\nTodavía necesito finalizar el mapa, y tenerlo completamente pulido antes de que lo lancemos\nen la universidad. Pero nuestra primer prueba fue más que exitosa.\n\nLuego, necesitamos probarlo en la universidad, ver como los alumnos reaccionan.\n\nEspero que ésto sea un gran éxito!\n\nSaludos,\n\n:wq",
+          "headerImage": {
+            "linkType": "Asset",
+            "id": "minecraft_agiles"
+          },
+          "tags": [
+            "Metodologías Agiles"
+          ],
+          "slug": "ensenando-agiles-con-el-minecraft",
+          "publicationDate": "2015-05-19T00:00:00-03:00"
+        }
+      }
+    ],
+    "author": [
+      {
+        "sys": {
+          "id": "dave"
+        },
+        "fields": {
+          "name": "David Litvak",
+          "role": "Ayudante",
+          "avatar": {
+            "linkType": "Asset",
+            "id": "dave"
+          },
+          "joinedAt": "2012-07-01T00:00:00+00:00"
+        }
+      }
+    ]
+  }
+}

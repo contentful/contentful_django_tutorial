@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<header class='intro-header' style="background-image: url('{% static "images/home-bg.jpg" %}')">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+        <div class='site-heading'>
+          <h1>Contentful Django Demo App</h1>
+          <hr class='small' />
+          <span class='subheading'>Demo Blog by David Litvak</span>
+      </div>
+    </div>
+  </div>
+</header>
+<div class='container'>
+  <div class='row'>
+    <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+      {% for post in posts %}
+        <div class='post-preview'>
+          <a href="/posts/{{ post.slug }}">
+            <h2 class='post-title'>{{ post.title }}</h2>
+          </a>
+          {% if post.subtitle %}
+            <h3 class='post-subtitle'>{{ post.subtitle }}
+          {% endif %}
+          <p class='post-meta'>Written by
+            <a href="#">{{ post.author.name }}</a>
+            on {{ post.publication_date|date:"d/M/Y" }}
+          </p>
+        </div>
+        <hr />
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,5 @@
+**/.DS_Store
+*.sqlite3
+**/__pycache__
+**/*.pyc
+*.lock
