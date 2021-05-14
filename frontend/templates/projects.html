@@ -19,7 +19,7 @@
     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
       {% for project in projects %}
         <div class='post-preview'>
-          <a href="/blog/{{ post.slug }}">
+          <a  href="/projects/{{ project.slug }}">
             <h2 class='post-title'>{{ project.project_title }}</h2>
           </a>
           {% if project.description %}
