@@ -7,9 +7,9 @@
     <div class='row'>
       <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
         <div class='site-heading'>
-          <h1>Contentful Django Demo App</h1>
+          <h1>Blog</h1>
           <hr class='small' />
-          <span class='subheading'>Demo Blog by David Litvak</span>
+          <span class='subheading'>Tony Vergara</span>
       </div>
     </div>
   </div>
@@ -17,17 +17,17 @@
 <div class='container'>
   <div class='row'>
     <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
-      {% for post in posts %}
+      {% for post in blogs %}
         <div class='post-preview'>
-          <a href="/posts/{{ post.slug }}">
+          <a href="/blog/{{ post.slug }}">
             <h2 class='post-title'>{{ post.title }}</h2>
           </a>
           {% if post.subtitle %}
-            <h3 class='post-subtitle'>{{ post.subtitle }}
+            <p class='post-subtitle'>{{ post.subtitle }}</p>
           {% endif %}
           <p class='post-meta'>Written by
             <a href="#">{{ post.author.name }}</a>
-            on {{ post.publication_date|date:"d/M/Y" }}
+            on {{ post.publlish_date }}
           </p>
         </div>
         <hr />

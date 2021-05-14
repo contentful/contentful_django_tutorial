@@ -10,9 +10,10 @@
     <meta name="author" content="" />
 
     {% block title %}
-      <title>Contentful Django App</title>
+      <title>Tony Vergara Portfolio</title>
     {% endblock %}
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="{% static '/stylesheets/bootstrap.min.css' %}" rel="stylesheet" />
     <link href="{% static '/stylesheets/clean-blog.css' %}" rel="stylesheet" />
     <link href="{% static '/stylesheets/font-awesome.min.css' %}" rel="stylesheet" type="text/css" />
@@ -39,6 +40,12 @@
           <ul class='nav navbar-nav navbar-right'>
             <li>
               <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="projects">Projects</a>
+            </li>
+            <li>
+              <a href="blog">Blog</a>
             </li>
           </ul>
         </div>

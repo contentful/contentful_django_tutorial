@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+{% load markdownify %}
+
+{% block content %}
+
+{% if not project.hero_image %}
+<header class='intro-header' style="background-color:#232323">
+{% else %}
+<header class='intro-header' style="background-image: url('{{project.hero_image.url}}')">
+{% endif %}
+  <div class='container'>
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2'>
+        <div class='post-heading'>
+          <h1>{{ project.project_title }}</h1>
+          {% if project.description %}
+            <p>{{ project.description }}</p>
+          {% endif %}
+          {% if project.technology %}
+            <p>{{ project.technology }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class='container'>
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+        <h2>{{ project.summary_heading }}</h2>
+        {{ project.summary_body }}
+      </div>
+    </div>
+    <hr>
+    {% if not project.section1_image %}
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2'>
+        <h3>{{ project.section1_title }}</h3>
+        <p>{{ project.s1_body }}</p>
+      </div>
+      <div class="col-lg-6"><img style="width:100%;" src="{{ project.section1_image.url }}"></div>
+    </div>
+    {% else %}
+    <div class='row'>
+      <div class='col-lg-6'>
+        <h3>{{ project.section1_title }}</h3>
+        <p>{{ project.s1_body }}</p>
+      </div>
+      <div class="col-lg-6"><img style="width:100%;"  src="{{ project.section1_image.url }}"></div>
+    </div>
+    {% endif %}
+    <hr>
+    {% if not project.section2_image %}
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2'>
+        <h3>{{ project.section2_title }}</h3>
+        <p>{{ project.s2_body }}</p>
+      </div>
+    </div>
+    {% else %}
+    <div class='row'>
+      <div class='col-lg-6'>
+        <h3>{{ project.section2_title }}</h3>
+        <p>{{ project.s2_body }}</p>
+      </div>
+      <div class="col-lg-6"><img style="width:100%;"  src="{{ project.section2_image.url }}"></div>
+    </div>
+    {% endif %}
+    <hr>
+    {% if not project.section3_image %}
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2'>
+        <h3>{{ project.section3_title }}</h3>
+        <p>{{ project.s3_body }}</p>
+      </div>
+    </div>
+    {% else %}
+    <div class='row'>
+      <div class='col-lg-6'>
+        <h3>{{ project.section3_title }}</h3>
+        <p>{{ project.s3_body }}</p>
+      </div>
+      <div class="col-lg-6"><img style="width:100%;"  src="{{ project.section3_image.url }}"></div>
+    </div>
+    {% endif %}
+    <hr>
+    {% if not project.section4_image %}
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2'>
+        <h3>{{ project.section4_title }}</h3>
+        <p>{{ project.s4_body }}</p>
+      </div>
+    </div>
+    {% else %}
+    <div class='row'>
+      <div class='col-lg-6'>
+        <h3>{{ project.section4_title }}</h3>
+        <p>{{ project.s4_body }}</p>
+      </div>
+      <div class="col-lg-6"><img style="width:100%;" src="{{ project.section4_image.url }}"></div>
+    </div>
+    {% endif %}
+  </div>
+</article>
+{% endblock %}
+

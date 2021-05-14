@@ -4,21 +4,47 @@ from .models import client
 
 # Create your views here.
 
-def posts(request):
-    return render(request, 'posts/all.html', {
-        'posts': client.entries(
-            {'content_type': 'post', 'include': 3}
+def home(request):
+    return render(request, 'index.html', {
+        'blogs': client.entries(
+            {'content_type': 'blogPost', 'include': 3}
+        ),'projects': client.entries(
+            {'content_type': 'project', 'include': 3}
+        ),'testimonials': client.entries(
+            {'content_type': 'testimonial', 'include': 3, 'limit': 3}
+        )
+
+    })
+
+
+def blogs(request):
+    return render(request, 'blog.html', {
+        'blogs': client.entries(
+            {'content_type': 'blogPost', 'include': 3}
         )
     })
 
-def post_by_slug(request, slug):
+def blog_by_slug(request, slug):
     try:
-        post = client.entries(
-            {'content_type': 'post', 'fields.slug': slug, 'include': 3}
+        blog = client.entries(
+            {'content_type': 'blogPost', 'fields.slug': slug, 'include': 3}
         )[0]
-        return render(request, 'posts/post.html', {'post': post})
+        return render(request, 'blog/post.html', {'blog': blog})
     except IndexError:
         raise Http404('Post not found for slug: {0}'.format(slug))
 
+def projects(request):
+    return render(request, 'projects.html', {
+        'projects': client.entries(
+            {'content_type': 'project', 'include': 3}
+        )
+    })
 
-
+def project_by_slug(request, slug):
+    try:
+        project = client.entries(
+            {'content_type': 'project', 'fields.slug': slug, 'include': 3}
+        )[0]
+        return render(request, 'projects/project.html', {'project': project})
+    except IndexError:
+        raise Http404('Project not found for slug: {0}'.format(slug))

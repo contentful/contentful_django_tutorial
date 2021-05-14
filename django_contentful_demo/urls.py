@@ -19,6 +19,9 @@ from frontend import views
 
 urlpatterns = [
     #url(r'^admin/', admin.site.urls),
-    url(r'^$', views.posts),
-    url(r'^posts/(?P<slug>[-\w]+)$', views.post_by_slug)
+    url(r'^$', views.home),
+    url(r'^blog$', views.blogs),
+    url(r'^blog/(?P<slug>[-\w]+)$', views.blog_by_slug),
+    url(r'^projects$', views.projects),
+    url(r'^projects/(?P<slug>[-\w]+)$', views.project_by_slug),
 ]

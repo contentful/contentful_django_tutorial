@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+<header class='intro-header' style="background-image: url('{% static "images/home-bg.jpg" %}')">
+  <div class='container'>
+    <div class='row'>
+      <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+        <div class='site-heading'>
+          <h1>Tony's got a website</h1>
+          <hr class='small' />
+          <span class='subheading'>UX Strategist and Researcher looking to use my background in psychology and neuroscience research to deliver products that make a positive impact in the world.</span>
+      </div>
+    </div>
+  </div>
+</header>
+<div class='container'>
+  <div class='row'>
+    <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+      <h2>Recent Projects</h2>
+      {% for project in projects %}
+        <div class='post-preview'>
+          <a href="/projects/{{ project.slug }}">
+            <h2 class='post-title'>{{ project.project_title }}</h2>
+          </a>
+          {% if project.description %}
+            <p class='post-subtitle'>{{ project.description }}</p>
+          {% endif %}
+          <p class='post-meta'>Written by
+            <a href="#">{{ project.author.name }}</a>
+            on {{ project.publication_date|date:"d/M/Y" }}
+          </p>
+        </div>
+        <hr />
+      {% endfor %}
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
+      <h2>Recent Blogs</h2>
+      {% for post in blogs %}
+        <div class='post-preview'>
+          <a href="/blog/{{ post.slug }}">
+            <h2 class='post-title'>{{ post.title }}</h2>
+          </a>
+          {% if post.subtitle %}
+            <p class='post-subtitle'>{{ post.subtitle }}</p>
+          {% endif %}
+          <p class='post-meta'>Written by
+            <a href="#">{{ post.author.name }}</a>
+            on {{ post.publication_date|date:"d/M/Y" }}
+          </p>
+        </div>
+        <hr />
+      {% endfor %}
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-10 col-md-offset-1'>
+      <h2>Recent Testimonials</h2>
+      {% for quote in testimonials %}
+        <div class='post-preview col-md-6'>
+          <div class='card'><p>"{{ quote.quote_text }}"</p></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

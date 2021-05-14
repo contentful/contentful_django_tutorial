@@ -3,22 +3,22 @@
 
 {% block content %}
 
-{% if not post.header_image %}
+{% if not blog.hero_image %}
 <header class='intro-header'>
 {% else %}
-<header class='intro-header' style="background-image: url('{{post.header_image.url}}')">
+<header class='intro-header' style="background-image: url('{{blog.hero_image.url}}')">
 {% endif %}
   <div class='container'>
     <div class='row'>
       <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
         <div class='post-heading'>
-          <h1>{{ post.title }}</h1>
-          {% if post.subtitle %}
-            <h2 class='subheading'>{{ post.subtitle }}</h2>
+          <h1>{{ blog.title }}</h1>
+          {% if blog.description %}
+            <h2 class='subheading'>{{ blog.description }}</h2>
           {% endif %}
           <span class='meta'>Written by
-            <a href="#">{{ post.author.name }}</a>
-            on {{ post.publication_date|date:"d/M/Y" }}
+            <a href="#">{{ blog.author.name }}</a>
+            on {{ blog.publication_date|date:"d/M/Y" }}
           </span>
         </div>
       </div>
@@ -30,7 +30,7 @@
   <div class='container'>
     <div class='row'>
       <div class='col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1'>
-        {{ post.content|markdownify|safe }}
+        {{ blog.body|markdownify|safe }}
       </div>
     </div>
   </div>
