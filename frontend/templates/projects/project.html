@@ -103,6 +103,17 @@
     </div>
     {% endif %}
   </div>
+  <div class="container">
+    <div class="row">
+    {% for deliverable in project.deliverables %}
+        <div class='post-preview'>
+          <a href="{{deliverable.url}}">{{deliverable.title}}</a>
+        </div>
+        <hr />
+      {% endfor %}
+    </div>
+  </div>
 </article>
+
 {% endblock %}
 
