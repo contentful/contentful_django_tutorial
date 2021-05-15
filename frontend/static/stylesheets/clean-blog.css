@@ -167,7 +167,8 @@ hr.small {
   .intro-header .site-heading,
   .intro-header .post-heading,
   .intro-header .page-heading {
-    padding: 150px 0;
+    padding: 150px 0 0 0;
+    margin-bottom: 150px;
   }
 }
 .intro-header .site-heading,
@@ -218,14 +219,14 @@ hr.small {
   color: white;
 }
 
-.intro-header > .container::before {
+.intro-header::before {
 	content: "";
     position: absolute;
     top: 0px;
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: rgba(0,0,0,0.25);
+    background-color: rgba(0,0,0,0.5);
 }
 
 @media only screen and (min-width: 768px) {
